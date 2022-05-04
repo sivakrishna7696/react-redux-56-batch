@@ -34,15 +34,15 @@ function Product() {
                             <h3 className='p-2'>{product.title}</h3>
                         </div>
                         <div className='mt-3'>
-                            <span className='p-2'> Price :$ {product.price}</span>
+                            <span className='p-2 bg-info'> Price :$ {product.price}</span>
                         </div>
 
                         <div className='mt-3'>
-                            <span className='p-2'> <b>Product-category :</b> {product.category}</span>
+                            <h2 className='p-2'>  {product.category}</h2>
                         </div>
 
                         <div className='mt-3'>
-                            <span className='p-2'> <b>product.description :</b> {product.description}</span>
+                            <span className='p-2'> {product.description}</span>
                         </div>
 
                         <div className='mt-3'>
