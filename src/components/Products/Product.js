@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
+import { addToCart } from '../../redux/ActionCreators';
+import { useDispatch } from 'react-redux';
+
 
 function Product() {
     
+    const dispatch = useDispatch
     const [product,setProduct] = useState({});
     const {id} = useParams();
 
@@ -19,6 +23,11 @@ function Product() {
     useEffect(()=>{
         getTheSingleProduct();
     },[])
+
+    const handleClick = (product)=>{
+        // console.log(product)
+        dispatch(addToCart(product));
+    }
 
     return (
     <div>
@@ -46,7 +55,9 @@ function Product() {
                         </div>
 
                         <div className='mt-3'>
-                            <span className='button btn btn-info px-3.py;'>Add to Cart</span>
+                            <span className='button btn btn-info px-3.py;' onClick={
+                                ()=>handleClick(product)
+                            }>Add to Cart</span>
                         </div>
                     </div>
                 </div>

@@ -8,7 +8,8 @@ const initialState = {
 export const ProductReducer = (state = initialState,action)=>{
     switch(action.type){
         case ActionTypes.ADD_TO_CART:
-            return [];
+            // console.log(action)
+            return {...state,cartData:[...state.cartData,action.payload]}
 
         default :
         return state;

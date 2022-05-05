@@ -22,7 +22,9 @@ function Header() {
           <a className="nav-link" href="#">ContactUs</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Cart <i className="bi bi-cart"></i></a>
+          <Link to="/cart" className="nav-link" href="#">Cart <i className="bi bi-cart"></i>
+            <sup className=''> {0}</sup>
+          </Link>
         </li>
         
       </ul>
