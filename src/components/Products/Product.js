@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 
 function Product() {
     
-    const dispatch = useDispatch
+    const dispatch = useDispatch();
     const [product,setProduct] = useState({});
     const {id} = useParams();
 
@@ -26,6 +26,7 @@ function Product() {
 
     const handleClick = (product)=>{
         // console.log(product)
+        console.log(addToCart(product))
         dispatch(addToCart(product));
     }
 
@@ -35,7 +36,7 @@ function Product() {
             {Object.keys(product).length>0 ?(
                 <div className='row border border-primary mt-2'>
                     <div className='col-md-6'>
-                        <img src={product.image} className="product-image" />
+                        <img src={product.image} className="product-image"alt={product.title} />
                     </div>
 
                     <div className='col-md-6'>

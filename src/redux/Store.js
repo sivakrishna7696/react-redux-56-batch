@@ -1,9 +1,6 @@
-import { createStore } from 'redux';
+// import { createStore } from 'redux';
 import { reducer } from './reducer';
+import { legacy_createStore as createStore} from 'redux'
 
-export const Store =  createStore(reducer)
+export const Store =  createStore(reducer,{})
 
-// import { configureStore } from '@reduxjs/toolkit';
-// import { reducer } from './reducer';
-
-// export const Store =  configureStore(reducer)
